@@ -12,12 +12,20 @@
 
 .header {
   font-family: 'Means Web', Georgia, Times, 'Times New Roman', serif;
-  font-size: 63px;
-  margin: 10px 30px;
+  font-size: 48px;
+  margin: 10px 25px;
   color: #241c15;
-  line-height: 1.1;
-  font-weight: 400px;
-  margin-bottom: 18px !important;
+  line-height: 1;
+}
+
+.form-caption p {
+  color: #241c15;
+  font-size: 18px;
+  margin: 10px 30px;
+}
+
+.form-caption a {
+  color: #007c89;
 }
 
 .form-container {
