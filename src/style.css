@@ -1,14 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Means Web', Georgia, Times, 'Times New Roman', serif;
   font-size: 4.4rem;
 }
 
+.container {
+  width: 1520px;
+  height: 670px;
+}
+
 .bg {
   width: 1000px;
   height: 670px;
+  background: url(https://github.com/Poonam1233/mailchimp-login/blob/main/src/images/phpza0iJx.jpeg?raw=true)
+    no-repeat contain;
 }
 
 .form {
   width: 500px;
   height: 670px;
+  background-color: #fff;
 }
