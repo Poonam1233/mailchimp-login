@@ -44,20 +44,22 @@
     </div>
 
     <script>
-
+      
       myform.addEventListener("submit",validateForm);
       function validateForm(e){
 
         var user = this.uname.value;
 
         if(user ==""){
-            err.innerHTML = "!woops""You did not enter a username or a password.";
+            err.innerHTML ="Don't leave this field blank";
             e.preventDefault();
         }
-        else if(isNaN(user) == false){
-            err.innerHTML ="Please enter valid name";
+
+        else if((at == -1) || (dot == -1) (uname.charAt(0) == "@") (uname.charAt(0) == ".")){
+            err2.innerHTML ="Please enter valid Emai-ID";
             e.preventDefault();
         }
+        
         else{
             err.innerHTML = "";
         }
