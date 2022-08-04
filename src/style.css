@@ -1,10 +1,14 @@
-body{
-  font-family: "Means Web",Georgia,Times,"Times New Roman",serif;
+body {
+  font-family: 'Means Web', Georgia, Times, 'Times New Roman', serif;
   font-size: 4.4rem;
 }
 
-.bg{
-  width: 1010px;
+.bg {
+  width: 1000px;
   height: 670px;
-  
+}
+
+.form {
+  width: 500px;
+  height: 670px;
 }
