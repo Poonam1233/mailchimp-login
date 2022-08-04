@@ -9,20 +9,21 @@ body {
   font-size: 4.4rem;
 }
 
-.container {
+.form-container {
+  background-color: #ffe01b;
   width: 1520px;
   height: 670px;
 }
 
-.bg {
-  width: 1000px;
+.bg-image {
+  width: 1010px;
   height: 670px;
-  background: url(https://github.com/Poonam1233/mailchimp-login/blob/main/src/images/phpza0iJx.jpeg?raw=true)
-    no-repeat;
   background-size: contain;
+  background-image: url(https://github.com/Poonam1233/mailchimp-login/blob/main/src/images/phpza0iJx.jpeg?raw=true);
 }
 
 .form {
+  margin-left: 10px;
   width: 500px;
   height: 670px;
   background-color: #fff;
