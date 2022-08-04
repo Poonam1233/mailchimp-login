@@ -12,7 +12,7 @@
 
 .header {
   font-family: 'Means Web', Georgia, Times, 'Times New Roman', serif;
-  font-size: 48px;
+  font-size: 45px;
   margin: 10px 25px;
   color: #241c15;
   line-height: 1;
@@ -21,7 +21,7 @@
 .form-caption p {
   color: #241c15;
   font-size: 18px;
-  margin: 10px 30px;
+  margin: 20px 30px;
 }
 
 .form-caption a {
