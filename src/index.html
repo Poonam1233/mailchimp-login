@@ -34,7 +34,7 @@
                 <lable class="name" >Username</lable>
                 <input type="text" name="uname" class="form-control">
             </div>
-            <div id="err" class="invalid"></div>
+            <div id="err" class="invalid" class="text1"></div>
 
         </div>
 
@@ -48,15 +48,18 @@
       myform.addEventListener("submit",validateForm);
       function validateForm(e){
 
-        var user = this.uname.value;
+        var uname = this.uname.value;
+        var at = uname.indexOf("@");
+        var dot = uname.indexOf(".");
 
-        if(user ==""){
+
+        if(uname ==""){
             err.innerHTML ="Don't leave this field blank";
             e.preventDefault();
         }
 
         else if((at == -1) || (dot == -1) (uname.charAt(0) == "@") (uname.charAt(0) == ".")){
-            err2.innerHTML ="Please enter valid Emai-ID";
+            err.innerHTML ="You did not enter a username or a password.";
             e.preventDefault();
         }
         
