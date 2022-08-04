@@ -32,22 +32,39 @@
           </div><form id="myform" noValidate>
             <div class="form-group">
                 <lable class="name" >Username</lable>
-                <input type="text" name="emailid" class="form-control">
+                <input type="text" name="uname" class="form-control">
             </div>
             <div id="err" class="invalid"></div>
 
-           
-
-          
-          
         </div>
 
-        <div class="bg-image">
-          
-        </image>
-        </div>
+        <div class="bg-image"></div>
+
       </div>
     </div>
+
+    <script>
+
+      myform.addEventListener("submit",validateForm);
+      function validateForm(e){
+
+        var user = this.uname.value;
+
+        if(user ==""){
+            err.innerHTML = "!woops""You did not enter a username or a password.";
+            e.preventDefault();
+        }
+        else if(isNaN(user) == false){
+            err.innerHTML ="Please enter valid name";
+            e.preventDefault();
+        }
+        else{
+            err.innerHTML = "";
+        }
+
+
+      }
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

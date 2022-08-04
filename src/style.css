@@ -55,9 +55,17 @@
 .form-control {
   border: 4px solid #3e45a7;
   border-radius: 0px !important;
-  height: 48px;
+  height: 42px;
+  margin-top: 10px;
 }
 
 .name {
-  padding-bottom: 20px !important;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.invalid {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
