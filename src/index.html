@@ -93,13 +93,14 @@
     <!--backg-->
 
     <script>
-       myform.addEventListener("submit",validateForm);
+      myform.addEventListener('submit', validateForm);
       function validateForm(e) {
         var uname = this.uname.value;
-        var pattern = /^[a-z]=$/;
+        var pattern = /^[a-zA-Z\s]=$/;
 
-        if (pattern.test(uname)  == false) {
-          err.innerHTML = "<h1>!woops</h1><p>You did not enter a username or a password.</p>";
+        if (pattern.test(uname) == false) {
+          err.innerHTML =
+            '<h1>!woops</h1><p>You did not enter a username or a password.</p>';
           e.preventDefault();
         }
       }
