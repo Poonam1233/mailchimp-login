@@ -79,7 +79,8 @@
   margin-right: 5px;
 }
 
-.invalid {
+.invalid,
+.wrong {
   display: none;
   box-sizing: border-box;
   width: 440px;
