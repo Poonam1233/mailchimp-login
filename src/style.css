@@ -31,12 +31,12 @@
 .form-container {
   background-color: #ffe01b;
   width: 1520px;
-  height: 670px;
+  height: 700px;
 }
 
 .bg-image {
   width: 1010px;
-  height: 670px;
+  height: 700px;
   background-size: contain;
   background-image: url(https://github.com/Poonam1233/mailchimp-login/blob/main/src/images/phpza0iJx.jpeg?raw=true);
 }
@@ -44,7 +44,7 @@
 .form {
   margin-left: 10px;
   width: 500px;
-  height: 670px;
+  height: 700px;
   background-color: #fff;
 }
 
@@ -57,6 +57,7 @@
   border-radius: 0px !important;
   height: 42px;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .name {
@@ -64,8 +65,68 @@
   font-weight: 500;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  float: right;
+  font-size: 18px;
+  color: #007c89;
+}
+
+.fa-solid {
+  margin-right: 5px;
+}
+
 .invalid {
+  display: none;
+  box-sizing: border-box;
+  width: 440px;
+  height: 80px;
+  background-color: #fbeeca;
+  padding: 10px;
+}
+
+.invalid p {
   color: #241c15;
+  font-size: 14px;
+}
+
+.invalid h1 {
+  font-size: 18px;
   margin-bottom: 10px;
-  font-size: 10px;
+}
+
+.btn-primary {
+  width: 440px;
+  height: 42px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007c89 !important;
+  border-radius: 0px !important;
+}
+.form-check-input {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.form-check {
+  margin: 30px 120px;
+}
+.ulink {
+  margin: 30px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.alink {
+  color: #007c89;
+  font-size: 17px;
+  margin: 10px;
+}
+
+.footer,
+.footer a {
+  font-size: 12px;
+  color: rgba(36, 28, 21, 0.65);
 }

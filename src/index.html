@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mailchimp Form</title>
 
+    <script
+      src="https://kit.fontawesome.com/c77d52f84a.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="style.css" />
 
     <link
@@ -14,85 +19,99 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-    
   </head>
 
   <body>
     <div class="backg">
       <div class="form-container d-flex">
         <div class="form">
-
           <div class="logo">
-            <image src="https://raw.githubusercontent.com/Poonam1233/mailchimp-login/b27c0c3561e01510e0ae77b5254977946fd38c4c/src/images/mc-freddie-dark.svg"></image>
+            <image
+              src="https://raw.githubusercontent.com/Poonam1233/mailchimp-login/b27c0c3561e01510e0ae77b5254977946fd38c4c/src/images/mc-freddie-dark.svg"
+            ></image>
           </div>
+
           <div class="form-caption">
             <h1 class="header">Log In</h1>
-            <p>Need a Mailchimp account?
-              <a href="#">Create an account</a></p>
-
-          </div><form id="myform" noValidate>
-            <div class="form-group">
-                <lable class="name" >Username</lable>
-                <input type="text" name="uname" class="form-control">
-            </div>
-            <div id="err" class="invalid" ></div>
-
-            <div class="form-group">
-              <lable>Password</lable>
-              <input type="password" name="pass" class="form-control">
+            <p>Need a Mailchimp account? <a href="#">Create an account</a></p>
           </div>
-          <div id="err3" class="invalid"></div>
 
+          <form id="myform" novalidate>
+            <div class="form-group">
+              <lable class="name">Username</lable>
+
+              <input type="text" name="uname" class="form-control" />
+            </div>
+            <div id="err" class="invalid"></div>
+
+            <div class="form-group">
+              <lable class="name">Password</lable>
+              <lable class="show"><i class="fa-solid fa-eye"></i>Show</lable>
+              <lable class="hide"><i class="fa-solid fa-eye-slash"></i>Hide</lable>
+              <input type="password" name="pass" class="form-control" />
+            </div>
+            <div id="err3" class="invalid"></div>
+
+            <button class="btn btn-primary">Log in</button>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Keep me logged in
+              </label>
+            </div>
+
+            <div class="ulink">
+              <a href="#" class="alink">Forgot username?</a>
+
+              <a href="#" class="alink"> Forgot password?</a>
+            </div>
+
+            <div class="footer">
+              <p>
+                ©2001–2022 All Rights Reserved. Mailchimp® is a registered
+                trademark of The Rocket Science Group, LLC.
+                <a href="#">Cookie Preferences</a>, <a href="#">Privacy</a>, and
+                <a href="#">Terms</a>.
+              </p>
+            </div>
+          </form>
+          <!--myform-->
         </div>
+        <!--form-->
 
         <div class="bg-image"></div>
-
       </div>
+      <!--form-contaner-->
     </div>
+    <!--backg-->
 
     <script>
-      
-      myform.addEventListener("submit",validateForm);
-      function validateForm(e){
-
+      myform.addEventListener('submit', validateForm);
+      function validateForm(e) {
         var uname = this.uname.value;
-        var at = uname.indexOf("@");
-        var dot = uname.indexOf(".");
+        var at = uname.indexOf('@');
+        var dot = uname.indexOf('.');
 
-        if(uname ==""){
-            err.innerHTML ="Don't leave this field blank";
-            e.preventDefault();
+        if (uname == '') {
+          err.innerHTML = "Don't leave this field blank";
+          e.preventDefault();
+        } else if (
+          at == -1 ||
+          (dot == -1)(uname.charAt(0) == '@')(uname.charAt(0) == '.')
+        ) {
+          err.innerHTML =
+            '<h1>! woops</h1><p>You did not enter a username or a password.</p>';
+          e.preventDefault();
+        } else {
+          err.innerHTML = '';
         }
-
-        else if((at == -1) || (dot == -1) (uname.charAt(0) == "@") (uname.charAt(0) == ".")){
-            err.innerHTML ="<h1>!woops</h1> <p>You did not enter a username or a password.</p>";
-            e.preventDefault();
-        }
-        
-        else{
-            err.innerHTML = "";
-        }
-          //uname
-
-          var pass = this.pass.value;
-        
-        if(pass ==""){
-            err3.innerHTML ="Don't leave this field blank";
-            e.preventDefault();
-        }
-        else if(pass.length < 6){
-            err3.innerHTML ="Password length is short";
-            e.preventDefault();
-        }
-        else if(pass.length = 6){
-            err3.innerHTML = "";
-        }
-        else{
-            err3.innerHTML = "";
-        }
-
-
-
+        //uname
       }
     </script>
 
