@@ -51,7 +51,7 @@
               >
               <input type="password" name="pass" class="form-control" />
             </div>
-            <div id="err3" class="wrong"></div>
+            <div id="err2" class="wrong"></div>
 
             <button class="btn btn-primary">Log in</button>
 
@@ -96,10 +96,19 @@
       myform.addEventListener('submit', validateForm);
       function validateForm(e) {
         var uname = this.uname.value;
-        var pattern = /^[a-zA-Z\s]=$/;
+        var pattern = /^[a-zA-Z\s]+$/;
 
         if (pattern.test(uname) == false) {
           err.innerHTML =
+            '<h1>!woops</h1><p>You did not enter a username or a password.</p>';
+          e.preventDefault();
+        }
+
+        var pass = this.pass.value;
+        var pattern = /^[a-zA-Z0-9]+$/;
+
+        if (pattern.test(pass) == false) {
+          err2.innerHTML =
             '<h1>!woops</h1><p>You did not enter a username or a password.</p>';
           e.preventDefault();
         }
