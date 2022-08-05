@@ -35,7 +35,13 @@
                 <lable class="name" >Username</lable>
                 <input type="text" name="uname" class="form-control">
             </div>
-            <div id="err" class="invalid" class="text1"></div>
+            <div id="err" class="invalid" ></div>
+
+            <div class="form-group">
+              <lable>Password</lable>
+              <input type="password" name="pass" class="form-control">
+          </div>
+          <div id="err3" class="invalid"></div>
 
         </div>
 
@@ -53,20 +59,38 @@
         var at = uname.indexOf("@");
         var dot = uname.indexOf(".");
 
-
         if(uname ==""){
             err.innerHTML ="Don't leave this field blank";
             e.preventDefault();
         }
 
         else if((at == -1) || (dot == -1) (uname.charAt(0) == "@") (uname.charAt(0) == ".")){
-            err.innerHTML ="You did not enter a username or a password.";
+            err.innerHTML ="<h1>!woops</h1> <p>You did not enter a username or a password.</p>";
             e.preventDefault();
         }
         
         else{
             err.innerHTML = "";
         }
+          //uname
+
+          var pass = this.pass.value;
+        
+        if(pass ==""){
+            err3.innerHTML ="Don't leave this field blank";
+            e.preventDefault();
+        }
+        else if(pass.length < 6){
+            err3.innerHTML ="Password length is short";
+            e.preventDefault();
+        }
+        else if(pass.length = 6){
+            err3.innerHTML = "";
+        }
+        else{
+            err3.innerHTML = "";
+        }
+
 
 
       }
