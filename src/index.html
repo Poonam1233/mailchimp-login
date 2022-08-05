@@ -39,12 +39,12 @@
           <form id="myform" novalidate>
             <div class="form-group">
               <lable class="name">Username</lable>
-              <input type="text" name="email" class="form-control" />
+              <input type="text" name="uname" class="form-control" />
             </div>
-            <div id="err2" class="invalid"></div>
+            <div id="err" class="invalid"></div>
 
             <div class="form-group">
-              <lable class="passwrd">Password</lable>
+              <lable class="name">Password</lable>
               <lable class="show"><i class="fa-solid fa-eye"></i>Show</lable>
               <lable class="hide"
                 ><i class="fa-solid fa-eye-slash"></i>Hide</lable
@@ -93,26 +93,17 @@
     <!--backg-->
 
     <script>
-      myform.addEventListener('submit', validateForm);
+       myform.addEventListener("submit",validateForm);
       function validateForm(e) {
-        var email = this.email.value;
-        var at = email.indexOf('@');
-        var dot = email.indexOf('.');
+        var uname = this.uname.value;
+        var pattern = /^[a-z]=$/;
 
-        if (email == '') {
-          err2.innerHTML = 'Please enter valid Email-Id';
+        if (pattern.test(uname)  == false) {
+          err.innerHTML = "<h1>!woops</h1><p>You did not enter a username or a password.</p>";
           e.preventDefault();
-        } else if (
-          at == -1 ||
-          (dot == -1)(email.charAt(0) == '@')(email.charAt(0) == '.')
-        ) {
-          err2.innerHTML = 'Please enter valid Emai-ID';
-          e.preventDefault();
-        } else {
-          err2.innerHTML = '';
         }
       }
-      //email
+      //uname
     </script>
 
     <script

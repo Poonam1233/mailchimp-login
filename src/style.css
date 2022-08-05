@@ -80,7 +80,6 @@
 }
 
 .invalid {
-  display: none;
   box-sizing: border-box;
   width: 440px;
   height: 80px;
