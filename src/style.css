@@ -27,7 +27,15 @@
 .form-caption a {
   color: #007c89;
 }
+.form-control {
+  border: 1px solid #241c15;
+  border-radius: 1px;
+}
 
+.form-control:hover {
+  border: 1px solid #007c89;
+  border-radius: 1px;
+}
 .form-container {
   background-color: #ffe01b;
   width: 1520px;
